@@ -7,7 +7,7 @@ module:
 
 params:
   navbarlogo:
-    image: logos/fresh.svg
+    image: logos/yeti.jpg
     link: /hugo-fresh
   hero:
     title: hugo fresh documentation

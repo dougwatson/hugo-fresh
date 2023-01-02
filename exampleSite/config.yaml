@@ -68,7 +68,7 @@ params:
     button: true
   sidebar:
     # Logo (from /images/logos/___.svg)
-    logo: fresh-square
+    logo: favicon.ico
     sections:
     - title: User
       icon: user

@@ -44,7 +44,7 @@ The "main" page which you see when you open the website.
 
 ```yaml
 hero:
-  title: Manage. Deploy.
+  title: Go. Coder.
   subtitle: Lorem ipsum sit dolor amet is dummy text used by the typography industry
   buttontext: Get started
   buttonlink: "#"
