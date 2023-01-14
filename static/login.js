@@ -6,7 +6,7 @@ window.onload = async (event) => {
   if (window.ethereum) {
     window.web3 = new Web3(window.ethereum); // create web3 instance
   } else {
-    alert("Please install MetaMask or any Ethereum Extension Wallet");
+    console.log("Please install MetaMask or any Ethereum Extension Wallet");
   }
   // check if user is already logged in and update the global userWalletAddress variable
   window.userWalletAddress = window.localStorage.getItem("userWalletAddress");
@@ -29,10 +29,10 @@ const login = async () => {
       window.localStorage.setItem("userWalletAddress", selectedAccount);
       showUserDashboard();
     } catch (error) {
-      alert(error);
+      console.log(error);
     }
   } else {
-    alert("wallet not found");
+    console.log("wallet not found");
   }
 };
 
