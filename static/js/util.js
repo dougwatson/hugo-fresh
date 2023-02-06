@@ -18,7 +18,8 @@ function checkUser(){
 
             // Log the "login" value to the console
             console.log("login=",user.login);
-
+	    var loginLink = document.querySelector('a[href="/login"]');
+	    login.innerHTML=user.login
             // Break out of the loop
             break;
         }
