@@ -1,4 +1,5 @@
 //this runs at the bottom of every page
+alert("FOO")
 checkUser()
 
 function checkUser(){
