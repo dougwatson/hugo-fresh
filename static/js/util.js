@@ -1,8 +1,10 @@
 //this runs at the bottom of every page
 
-checkUser()
+checkUser(1)
 
-function checkUser(){
+function checkUser(x){
+    var x=x+1 //x cache buster
+    console.log("x=",x)
     // Read all cookies as an array of strings
     var cookies = document.cookie.split(';');
     console.log("cookies=================================",cookies)
