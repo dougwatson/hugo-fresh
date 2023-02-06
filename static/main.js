@@ -4,7 +4,7 @@ checkUser()
 function checkUser(){
     // Read all cookies as an array of strings
     var cookies = document.cookie.split(';');
-
+    console.log("cookies=",cokies)
     // Iterate over the cookies
     for (var i = 0; i < cookies.length; i++) {
         // Trim leading whitespace from the cookie string
