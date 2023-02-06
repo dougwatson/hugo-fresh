@@ -17,7 +17,7 @@ function checkUser(){
             var user = JSON.parse(cookie.substring(5));
 
             // Log the "login" value to the console
-            console.log("login=",user.login);
+            console.log("logins=",user.login);
 	    var loginLink = document.querySelector('a[href="/login"]')
 	    loginLink.innerHTML="<strong>"+user.login+"<strong>"
 	    
