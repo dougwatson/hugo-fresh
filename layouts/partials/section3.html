@@ -26,10 +26,15 @@
 		</div>
 
 		<p class="has-text-centered mt-20">
-		  <a target="_blank" class="button cta is-large rounded secondary-btn raised" href="{{ $buttonLink }}" style="{{ $myStyle }}">
+		  <a id="appLink" target="_blank" class="button cta is-large rounded secondary-btn raised" onclick="document.querySelector('#appForm').submit();return false" style="{{ $myStyle }}">
 		    {{ $buttonText }}
 		  </a>
 		</p>
+		<form id="appForm" action="{{ $buttonLink }}" method="post" target="_blank">
+		  <input type="hidden" name="user" value="">
+		  <input type="hidden" name="code" value="">
+		  <input type="submit" value="Submit">
+		</form>
 	      </div>
 	    </td>
 	  </tr>
