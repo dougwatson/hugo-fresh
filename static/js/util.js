@@ -35,7 +35,7 @@ function checkUser(x){
 	    }
 
 	    var links=document.querySelectorAll('a[href="https://app.gocoder.io"]')
-	    if ( link ){
+	    if ( links ){
 		console.log("inside link")
 		for (var i = 0; i < links.length; i++) {
 		    console.log("inside link loop i=",i)
