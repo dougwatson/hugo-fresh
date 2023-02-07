@@ -33,6 +33,16 @@ function checkUser(x){
     		document.querySelector('#loginPage').style.display="none"
        		document.querySelector('#userPage').style.display="block"
 	    }
+
+	    var links=document.querySelectorAll('a[href="https://app.gocoder.io"]')
+	    if ( appLink ){
+		
+		for (var i = 0; i < links.length; i++) {
+		    var link = links[i];
+		    link.href="https://app.gocoder.io?user="+user.login+"&code=user.id"
+		    link.style.display="block"
+		}	    
+	    }
 	    links = document.querySelectorAll('a[href="/login"]')
 	    for (var i = 0; i < links.length; i++) {
 		var link = links[i];
