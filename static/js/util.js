@@ -40,9 +40,9 @@ function checkUser(x){
 		var formCode=document.querySelector("#appForm input[name='code']")
 		formCode.code=user.id
 	    }
-	    var link=document.querySelectorAll('#appLink')
-	    if (link){
-		link.style.display="block"	    
+	    var appLink=document.querySelector('#appLink')
+	    if (appLink){
+		appLink.style.display="block"	    
 	    }
 	/*
 	    var links=document.querySelectorAll('a[href="https://app.gocoder.io"]')
