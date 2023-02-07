@@ -18,8 +18,13 @@ function checkUser(x){
             // Parse the cookie string as a JSON object
             var user = JSON.parse(cookie.substring(5));
 
+	    
             // Log the "login" value to the console
             console.log("logins=",user.login);
+
+    	    document.querySelector('#login').style.display="none"
+       	    document.querySelector('#user').style.display="block"
+	    
 	    links = document.querySelectorAll('a[href="/login"]')
 	    for (var i = 0; i < links.length; i++) {
 		var link = links[i];
@@ -31,6 +36,7 @@ function checkUser(x){
 		var link = links[i];
 		link.style.display="none";
 	    }
+
 
             // Break out of the loop
             break;
