@@ -20,11 +20,17 @@ function checkUser(x){
 
             // Log the "login" value to the console
             console.log("logins=",user.login);
-	    var loginLink = document.querySelector('a[href="/login"]')
-	    loginLink.innerHTML="<strong>"+user.login+"<strong>"
+	    links = document.querySelectorAll('a[href="/login"]')
+	    for (var i = 0; i < links.length; i++) {
+		var link = links[i];
+		link.innerHTML="<strong>"+user.login+"<strong>"
+	    }	    
 	    
-	    var signupLink = document.querySelector('a[href="/signup"]')
-	    signupLink.style.display="none";
+	    links = document.querySelectorAll('a[href="/signup"]')
+	    for (var i = 0; i < links.length; i++) {
+		var link = links[i];
+		link.style.display="none";
+	    }
 
             // Break out of the loop
             break;
