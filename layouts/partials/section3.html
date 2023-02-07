@@ -4,6 +4,7 @@
 {{- $image      := index $section3 "image" }}
 {{- $buttonText := index $section3 "buttontext" }}
 {{- $buttonLink := index $section3 "buttonlink" }}
+{{- $myStyle := index $section3 "mystyle" }}
 <section class="section section-feature-grey is-medium" id="section3">
   <div class="container">
     <div class="columns">
@@ -25,7 +26,7 @@
 		</div>
 
 		<p class="has-text-centered mt-20">
-		  <a target="_blank" class="button cta is-large rounded secondary-btn raised" href="{{ $buttonLink }}">
+		  <a target="_blank" class="button cta is-large rounded secondary-btn raised" href="{{ $buttonLink }}" style="{{ $myStyle }}">
 		    {{ $buttonText }}
 		  </a>
 		</p>
