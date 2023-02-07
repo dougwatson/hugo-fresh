@@ -1,7 +1,13 @@
 //this runs at the bottom of every page
 
 checkUser(1)
-
+function logout() {
+  // Get the cookie name
+  var cookieName = "user"; 
+  // Set the cookie value to an empty string
+  document.cookie = cookieName + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  location.reload();
+}
 function checkUser(x){
     var x=x+1 //x cache buster
     console.log("x=",x)
