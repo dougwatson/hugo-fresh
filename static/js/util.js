@@ -22,8 +22,8 @@ function checkUser(x){
             // Log the "login" value to the console
             console.log("logins=",user.login);
 
-    	    document.querySelector('#login').style.display="none"
-       	    document.querySelector('#user').style.display="block"
+    	    document.querySelector('#loginPage').style.display="none"
+       	    document.querySelector('#userPage').style.display="block"
 	    
 	    links = document.querySelectorAll('a[href="/login"]')
 	    for (var i = 0; i < links.length; i++) {
