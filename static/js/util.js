@@ -44,8 +44,10 @@ function checkUser(x){
 	    if (appLinks){
 		for (var i = 0; i < appLinks.length; i++) {
 		    var link = appLinks[i];
-		    
-		    link.style.display="inline"
+
+		    if (link.style.display=="none"){
+			link.style.display="inline" //don't want to use inline unless needed cause it can mess up the look
+		    }
 		    link.href="https://app.gocoder.io/login?code="+user.id
 		    link.target="_blank"
 		}	    
