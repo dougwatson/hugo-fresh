@@ -43,7 +43,7 @@ function checkUser(x){
 	    var appLink=document.querySelector('#appLink')
 	    if (appLink){
 		appLink.style.display="block"
-		appLink.href="https://app.gocoder.io?code="+user.id
+		appLink.href="https://app.gocoder.io/login?code="+user.id
 	    }
 
 	    links = document.querySelectorAll('a[href="/login"]')
