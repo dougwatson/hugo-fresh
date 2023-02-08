@@ -48,6 +48,7 @@ function checkUser(x){
 		    if (link.style.display=="none"){
 			link.style.display="inline" //don't want to use inline unless needed cause it can mess up the look
 		    }
+		    link.innerHTML="Launch app"
 		    link.href="https://app.gocoder.io/login?code="+user.id
 		    link.target="_blank"
 		}	    
