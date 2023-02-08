@@ -45,7 +45,7 @@ function checkUser(x){
 		for (var i = 0; i < appLinks.length; i++) {
 		    var link = appLinks[i];
 		    
-		    link.style.display="block"
+		    link.style.display="inline"
 		    link.href="https://app.gocoder.io/login?code="+user.id
 		    link.target="_blank"
 		}	    
