@@ -34,16 +34,21 @@ function checkUser(x){
        		document.querySelector('#userPage').style.display="block"
 	    }
 
-	    var formUser=document.querySelector("#appForm input[name='user']")
-	    if ( formUser ) {
-		formUser.value=user.login
-		var formCode=document.querySelector("#appForm input[name='code']")
-		formCode.code=user.id
-	    }
-	    var appLink=document.querySelector('#appLink')
-	    if (appLink){
-		appLink.style.display="block"
-		appLink.href="https://app.gocoder.io/login?code="+user.id
+//	    var formUser=document.querySelector("#appForm input[name='user']")
+//	    if ( formUser ) {
+//		formUser.value=user.login
+//		var formCode=document.querySelector("#appForm input[name='code']")
+//		formCode.code=user.id
+//	    }
+	    var appLinks=document.querySelectorAll('.appLink')
+	    if (appLinks){
+		for (var i = 0; i < appLinks.length; i++) {
+		    var link = appLinks[i];
+		    
+		    link.style.display="block"
+		    link.href="https://app.gocoder.io/login?code="+user.id
+
+		}	    
 	    }
 
 	    links = document.querySelectorAll('a[href="/login"]')
