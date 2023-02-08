@@ -47,7 +47,7 @@ function checkUser(x){
 		    
 		    link.style.display="block"
 		    link.href="https://app.gocoder.io/login?code="+user.id
-
+		    link.target="_blank"
 		}	    
 	    }
 
