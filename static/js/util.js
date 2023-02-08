@@ -1,6 +1,9 @@
 //this runs at the bottom of every page
+//needs to match util.js from www.gocoder.io
+document.addEventListener('DOMContentLoaded', async () => {
+    checkUser(1)
+})
 
-checkUser(1)
 function logout() {
   // Get the cookie name
   var cookieName = "user"; 
@@ -23,12 +26,9 @@ function checkUser(x){
         if (cookie.startsWith('user=')) {
             // Parse the cookie string as a JSON object
             var user = JSON.parse(cookie.substring(5));
-
 	    
             // Log the "login" value to the console
             console.log("logins=",user.login);
-
-
 	    if (document.querySelector('#loginPage')){
     		document.querySelector('#loginPage').style.display="none"
        		document.querySelector('#userPage').style.display="block"
@@ -44,19 +44,7 @@ function checkUser(x){
 	    if (appLink){
 		appLink.style.display="block"	    
 	    }
-	/*
-	    var links=document.querySelectorAll('a[href="https://app.gocoder.io"]')
-	    
-	    if ( links ){
-		console.log("inside link")
-		for (var i = 0; i < links.length; i++) {
-		    console.log("inside link loop i=",i)
-		    var link = links[i];
-		    link.href="https://app.gocoder.io?user="+user.login+"&code="user.id
-		    link.style.display="block"
-		}	    
-		}
-*/	
+
 	    links = document.querySelectorAll('a[href="/login"]')
 	    for (var i = 0; i < links.length; i++) {
 		var link = links[i];
@@ -68,8 +56,6 @@ function checkUser(x){
 		var link = links[i];
 		link.style.display="none";
 	    }
-
-
             // Break out of the loop
             break;
         }
