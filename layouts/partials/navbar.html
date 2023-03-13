@@ -8,7 +8,7 @@
 {{- $navbarLogoHeight := .Site.Params.navbarlogo.height | default 28 }}
 <nav class="navbar is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
   <div class="container">
-    <div class="navbar-brand">
+    <div class="navbar-brand" style="margin-left: -1rem;">
       {{- if $navbarLogo}}
       <a class="navbar-item" href="{{ $navbarLogo.link }}">
         <img src="{{ printf "/images/%s" $navbarLogo.image | relURL }}" alt="" width="{{ $navbarLogoWidth }}" height="{{ $navbarLogoHeight }}">
@@ -56,28 +56,28 @@
         <div class="navbar-end">
           {{- range $navbar }}
           {{- if .sublinks }}
-          <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-item has-dropdown is-hoverable" onclick="document.getElementById('gocoderApp').contentWindow.highlightAndClick('#runButton')">
             <a class="navbar-link">
-              {{ .title }}
+              {{ .title }} 111
             </a>
 
             <div class="navbar-dropdown">
               {{- range .sublinks }}
               <a href="{{ .url }}" class="loginLink navbar-item">
-                {{ .title }}
+                {{ .title }} 222
               </a>
               {{- end }}
             </div>
           </div>
           {{- else if .button }}
-          <a href="{{ .url }}" class="loginLink navbar-item">
+          <a href="{{ .url }}" class="loginLink navbar-item" onclick="alert('HH')">
             <span class="button signup-button rounded secondary-btn raised">
-              {{ .title }}
+              {{ .title }} 333
             </span>
           </a>
           {{- else }}
           <a href="{{ .url }}" class="navbar-item is-secondary">
-            {{ .title }}
+            {{ .title }} 444
           </a>
           {{- end }}
           {{- end }}

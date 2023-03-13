@@ -4,11 +4,29 @@
 {{- $buttonText := index $hero "buttontext" }}
 {{- $buttonLink := index $hero "buttonlink" }}
 {{- $image      := index $hero "image" }}
-<div class="hero-body">
+<div class="hero-body" style="padding:0px">
   <div class="container">
     <div class="columns is-vcentered">
-      <div class="column is-5 is-offset-1 landing-caption">
-        <h1 class="title is-1 is-bold is-spaced">
+
+      <div class="column is-5 is-offset-1" style="margin:0px">
+
+	<iframe id="gocoderApp" src="https://app.gocoder.io/" style="overflow:hidden;height:500px;width:800px">here</iframe>
+        <!--figure class="image is-4by3">
+          <img src="{{ printf "/images/%s" $image | relURL }}" alt="Description">
+        </figure-->
+
+	  <!--p class="has-text-centered mt-20">
+		  <a target="_blank" class="appLink button cta is-large rounded secondary-btn raised" href="https://app.gocoder.io"
+		    {{ $buttonText }}
+		  </a>
+	</p-->
+	  
+      </div>
+
+
+
+      <div class="column is-5 is-offset-1 landing-caption" style="border:4px;width:300px;margin-left:30px;">
+        <h1 class="title is-1 is-bold is-spaced" style="font-size: 40px">
           {{ $title }}
         </h1>
         {{ with $subtitle }}
@@ -22,11 +40,7 @@
           </a>
         </p>
       </div>
-      <div class="column is-5 is-offset-1">
-        <figure class="image is-4by3">
-          <img src="{{ printf "/images/%s" $image | relURL }}" alt="Description">
-        </figure>
-      </div>
+
     </div>
   </div>
 </div>
